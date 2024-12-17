@@ -9,7 +9,7 @@ public class Spinner : MonoBehaviour
     {
         if (transform.rotation.z == 0) 
         {
-            GameManager.Instance.Score += 100;
+            GameManager.Instance.IncreaseScore(100);
         }
     }
 }

@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public int Score 
     { 
         get;
-        set;
+        private set;
     }
     public int Lives { get; set; }
 
@@ -38,7 +38,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void IncreaseScore(int increment) {
-
+        Score += increment;
+        scoreboard.GetComponent<TextMeshPro>().text = "SCORE: " + Score;
     }
 
     /*public void DecrementLives(GameObject ball)
