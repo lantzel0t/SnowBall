@@ -9,6 +9,8 @@ public class Bumper : MonoBehaviour
         Vector3 angle = (other.gameObject.transform.position
             - this.transform.position) * pushMult;
         Debug.Log("Bumping ball at: " + angle);
+        Manager.score += 100;
+        Debug.Log(Manager.score);
         
         other.gameObject.GetComponent<Rigidbody>().AddForce(angle, ForceMode.Impulse);
 

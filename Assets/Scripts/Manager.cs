@@ -3,8 +3,8 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
 
-    public int score = 0;
-    public int lives = 3;
+    public static int score = 0;
+    public static int lives = 3;
     public Vector3 ballStartPos = Vector3.zero;
 
     void Start()
