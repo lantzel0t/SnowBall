@@ -1,21 +1,44 @@
 using UnityEngine;
+using TMPro;
 
-public class Manager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
 
-    public static int score = 0;
-    public static int lives = 3;
+    private static GameManager _instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                Debug.LogError("GameManager is null");
+            }
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
+    public int Score 
+    { 
+        get;
+        set;
+    }
+    public int Lives { get; set; }
+
     public Vector3 ballStartPos = Vector3.zero;
+    public GameObject scoreboard;
 
     void Start()
     {
         Physics.gravity = new Vector3(0, -20f, 0);
     }
 
-    void ResetGame()
-    {
-        score = 0;
-        lives = 3;
+    public void IncreaseScore(int increment) {
+
     }
 
     /*public void DecrementLives(GameObject ball)

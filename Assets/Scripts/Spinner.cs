@@ -9,8 +9,7 @@ public class Spinner : MonoBehaviour
     {
         if (transform.rotation.z == 0) 
         {
-            Manager.score += 100;
-            Debug.Log(Manager.score);
+            GameManager.Instance.Score += 100;
         }
     }
 }
