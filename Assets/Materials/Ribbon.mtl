@@ -1,0 +1,12 @@
+# Blender 4.2.5 LTS MTL File: 'Ribbon.blend'
+# www.blender.org
+
+newmtl Material
+Ns 530.488586
+Ka 0.574803 0.574803 0.574803
+Kd 0.800172 0.000000 0.008290
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
