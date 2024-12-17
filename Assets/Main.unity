@@ -622,7 +622,7 @@ Transform:
   m_GameObject: {fileID: 508853366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.26, y: 0.242, z: -0.73}
+  m_LocalPosition: {x: 4.53, y: 0.24, z: -0.04}
   m_LocalScale: {x: 0.7, y: 0.1, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -837,8 +837,9 @@ GameObject:
   - component: {fileID: 715051849}
   - component: {fileID: 715051848}
   - component: {fileID: 715051847}
+  - component: {fileID: 715051850}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: DropTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +854,7 @@ Transform:
   m_GameObject: {fileID: 715051845}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.178, z: 1}
+  m_LocalPosition: {x: 0, y: 0.178, z: -0.872}
   m_LocalScale: {x: 0.1, y: 0.5, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -874,7 +875,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -933,6 +934,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715051845}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &715051850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715051845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76661b2bfbe8ee2459772819b66d98a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushMult: 20
+  dropAmount: 0.55
 --- !u!1 &760543558
 GameObject:
   m_ObjectHideFlags: 0

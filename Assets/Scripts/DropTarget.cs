@@ -3,6 +3,7 @@ using UnityEngine;
 public class DropTarget : MonoBehaviour
 {
     public float pushMult = 20.0f;
+    public float dropAmount = 0.55f;
     private bool isTriggered = false;
     private Vector3 origPos;
     Vector3 droppedPos;
@@ -11,7 +12,7 @@ public class DropTarget : MonoBehaviour
     {
         origPos = this.transform.position;
         droppedPos = origPos;
-        droppedPos.y -= 3f;
+        droppedPos.y -= dropAmount;
     }
     
 
@@ -32,12 +33,12 @@ public class DropTarget : MonoBehaviour
         if (isTriggered) 
         {
             this.gameObject.transform.position = Vector3.Lerp(
-                this.gameObject.transform.position, droppedPos, 0.5f); 
+                this.gameObject.transform.position, droppedPos, 0.2f); 
         } 
         else 
         {
             this.gameObject.transform.position = Vector3.Lerp(
-                this.gameObject.transform.position, origPos, 0.5f); 
+                this.gameObject.transform.position, origPos, 0.2f); 
         }
     }
 }
