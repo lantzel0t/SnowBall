@@ -7,6 +7,11 @@ public class Manager : MonoBehaviour
     public int lives = 3;
     public Vector3 ballStartPos = Vector3.zero;
 
+    void Start()
+    {
+        Physics.gravity = new Vector3(0, -20f, 0);
+    }
+
     void ResetGame()
     {
         score = 0;
