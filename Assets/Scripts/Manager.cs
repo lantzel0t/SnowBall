@@ -5,7 +5,7 @@ public class Manager : MonoBehaviour
 
     public int score = 0;
     public int lives = 3;
-    public vector3 ballStartPos = Vector3.zero;
+    public Vector3 ballStartPos = Vector3.zero;
 
     void ResetGame()
     {
@@ -13,13 +13,13 @@ public class Manager : MonoBehaviour
         lives = 3;
     }
 
-    void DecrementLives(gameObject ball)
+    /*public void DecrementLives(GameObject ball)
     {
         lives--;
         ball.transform.position = ballStartPos;
-        ball.rigidbody.velocity = Vector3.zero; 
-        ball.rigidbody.angularVelocity = Vector3.zero; 
-    }
+        ball.GetComponent<Rigidbody>().linearVelocity = Vector3.zero; 
+        ball.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
+    }*/
 
 
 }
