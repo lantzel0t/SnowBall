@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         get;
         private set;
     }
-    public int Lives { get; set; }
+    public int Lives { get; set; } = 3;
 
     public Vector3 ballStartPos = Vector3.zero;
     public GameObject scoreboard;
@@ -40,11 +40,12 @@ public class GameManager : MonoBehaviour
         scoreboard.GetComponent<TextMeshPro>().text = "SCORE: " + Score;
     }
 
-    public void KillBall() {
+    public void KillBall(GameObject ball) {
         if (Lives > 0)
         {
             Lives--;
-
+            ball.transform.position = ballSpawn.transform.position;
+            Debug.Log("Ball lost");
         }
         else
         {

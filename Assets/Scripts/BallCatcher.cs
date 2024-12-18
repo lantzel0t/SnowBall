@@ -6,6 +6,6 @@ public class BallCatcher : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Manager.DecrementLives(other.gameObject);
+        GameManager.Instance.KillBall(other.gameObject);
     }
 }
