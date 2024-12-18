@@ -4,7 +4,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
 
+    public GameObject ballSpawn;
     private static GameManager _instance;
+
     public static GameManager Instance
     {
         get
@@ -32,14 +34,23 @@ public class GameManager : MonoBehaviour
     public Vector3 ballStartPos = Vector3.zero;
     public GameObject scoreboard;
 
-    void Start()
-    {
-        Physics.gravity = new Vector3(0, -20f, 0);
-    }
 
     public void IncreaseScore(int increment) {
         Score += increment;
         scoreboard.GetComponent<TextMeshPro>().text = "SCORE: " + Score;
+    }
+
+    public void KillBall() {
+        if (Lives > 0)
+        {
+            Lives--;
+
+        }
+        else
+        {
+            Debug.Log("Game over!");
+        }
+        
     }
 
     /*public void DecrementLives(GameObject ball)
