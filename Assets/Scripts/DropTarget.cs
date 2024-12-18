@@ -19,8 +19,7 @@ public class DropTarget : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Vector3 angle = (other.gameObject.transform.position
-            - this.transform.position) * pushMult;
+        Vector3 angle = (transform.forward * pushMult);
         Debug.Log("Droptargeting ball at: " + angle);
         
         other.gameObject.GetComponent<Rigidbody>().AddForce(angle, ForceMode.Impulse);
