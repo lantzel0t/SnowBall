@@ -3,7 +3,7 @@ using UnityEngine;
 public class TurnTable : MonoBehaviour
 {
     Vector3 eulerAngleVelocity;
-    Rigidbody rigidbody;
+    Rigidbody rigidbody_a;
     public float rotSpeed = 200f;
 
 
@@ -11,13 +11,13 @@ public class TurnTable : MonoBehaviour
     void Start()
     {
         eulerAngleVelocity = new Vector3(0,rotSpeed,0);
-        rigidbody = GetComponent<Rigidbody>();
+        rigidbody_a = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Quaternion deltaRotation = Quaternion.Euler(eulerAngleVelocity * Time.deltaTime);
-        GetComponent<Rigidbody>().MoveRotation(rigidbody.rotation * deltaRotation);
+        rigidbody_a.MoveRotation(rigidbody_a.rotation * deltaRotation);
     }
 }
