@@ -34,12 +34,12 @@ public class DropTarget : MonoBehaviour
         if (isTriggered) 
         {
             this.gameObject.transform.position = Vector3.Lerp(
-                this.gameObject.transform.position, droppedPos, 0.2f); 
+                this.gameObject.transform.position, droppedPos, 0.1f); 
         } 
         else 
         {
             this.gameObject.transform.position = Vector3.Lerp(
-                this.gameObject.transform.position, origPos, 0.2f); 
+                this.gameObject.transform.position, origPos, 0.1f); 
         }
     }
 }
