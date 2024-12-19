@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         get;
         private set;
     }
-    public int Lives { get; set; } = 3;
+    public int Lives { get; set; } = 999;
 
     public Vector3 ballStartPos = Vector3.zero;
     public GameObject scoreboard;
@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         {
             Lives--;
             ball.transform.position = ballSpawn.transform.position;
+            ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            ball.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             Debug.Log("Ball lost");
         }
         else
@@ -52,6 +54,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("Game over!");
         }
         
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Backspace))
+        {
+            KillBall(GameObject.Find("Pinball"));
+        }
     }
 
     /*public void DecrementLives(GameObject ball)
