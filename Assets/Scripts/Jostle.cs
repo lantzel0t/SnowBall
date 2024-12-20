@@ -28,8 +28,12 @@ public class Jostle : MonoBehaviour
            
         }
         rigidbody_a.AddForce(Random.onUnitSphere*traumaCurrent);
+        cam.transform.localPosition = Random.insideUnitSphere*(traumaCurrent/10);
         if (traumaCurrent>0) { traumaCurrent -= 0.02f; }
+
+        
     }
 
     //TODO: camera jostle!
+
 }
