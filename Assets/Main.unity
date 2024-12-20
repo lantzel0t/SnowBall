@@ -1062,7 +1062,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 2, y: 0.15, z: 2.302}
-  m_LocalScale: {x: 0.51, y: -0.13, z: 0.13}
+  m_LocalScale: {x: 0.51, y: 0.13, z: 0.13}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2030789912}
@@ -2037,6 +2037,7 @@ GameObject:
   - component: {fileID: 1007373130}
   - component: {fileID: 1007373132}
   - component: {fileID: 1007373131}
+  - component: {fileID: 1007373133}
   m_Layer: 0
   m_Name: Pinball
   m_TagString: Untagged
@@ -6955,6 +6956,21 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1007373133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007373125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28aab05e8d1f92c43807dfd540623ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  traumaPerTap: 1
+  traumaMax: 100
+  traumaCurrent: 0
 --- !u!4 &1059374392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3302309734062268191, guid: 08a7fbd609188f94ba6ab18c8e3c1353,
@@ -8245,7 +8261,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22054338, y: 0.40087038, z: 1.0568833}
+  m_Size: {x: 0.22054338, y: 0.40087038, z: -1.056883}
   m_Center: {x: -0.14738879, y: 0.0016559765, z: 0.49065986}
 --- !u!54 &1803668212
 Rigidbody:

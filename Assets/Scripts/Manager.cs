@@ -52,8 +52,12 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("Game over!");
-        }
-        
+        }   
+    }
+
+    public void TriggerTilt() {
+        //Todo!
+        Debug.Log("TILT!!!!!!!!");
     }
 
     void Update()
