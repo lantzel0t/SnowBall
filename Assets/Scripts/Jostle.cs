@@ -6,8 +6,8 @@ public class Jostle : MonoBehaviour
 {
     private Rigidbody rigidbody_a;
     private Camera cam;
-    public float traumaPerTap = 0.01f;
-    public float traumaMax = 0.05f;
+    public float traumaPerTap = 2f;
+    public float traumaMax = 10f;
     public float traumaCurrent = 0f;
 
     void Start()

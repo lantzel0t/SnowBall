@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3138394788096923517}
   - component: {fileID: 100577199767999802}
   - component: {fileID: 7589364247429761927}
-  - component: {fileID: 285222190012724073}
   - component: {fileID: 8550627113838506401}
   m_Layer: 0
   m_Name: Bumper
@@ -99,29 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a3e86dcda785c47a443ed44bbb0cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushMult: 5
+  pushMagnitude: 10
   baseScore: 100
---- !u!135 &285222190012724073
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5643309756056484910}
-  m_Material: {fileID: 13400000, guid: 9fd5e161e4cccf64db4be536553cb35b, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0.000000059604645, y: 0.96, z: -0.00000008940697}
 --- !u!135 &8550627113838506401
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -141,7 +119,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.4
+  m_Radius: 0.5
   m_Center: {x: 0.000000059604645, y: 0.96, z: -0.00000008940697}
 --- !u!1001 &7400459407454914119
 PrefabInstance:
